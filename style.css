@@ -71,17 +71,23 @@ header {
     background-color: var(--darkgrey);
 }
 
+.logo {
+    height: 40px;
+    width: auto;
+    padding-right: 15px;
+}
+
 /* Barra sotto grande */
 .search-large {
     padding: 9px 20px;
-    background-color: var(--lightgrey);
+    background-color: var(--grey);
 }
 
 .search-large .input-icon {
     position: relative;
     display: flex;
     align-items: center;
-    width: 320px;
+    width: 450px;
 }
 
 .search-large .input-icon i {
@@ -94,7 +100,7 @@ header {
 
 .search-large .input-icon input {
     width: 100%;
-    padding: 10px 15px 10px 40px;
+    padding: 8px 15px 8px 40px;
     background-color: var(--lightgrey);
     border: 1px solid white;
     border-radius: 20px;
@@ -112,7 +118,7 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 300px;
 }
 
 .search-small .input-icon i {
@@ -125,10 +131,9 @@ header {
 
 .search-small .input-icon input {
     width: 100%;
-    padding: 10px 15px 10px 40px;
+    padding: 8px 15px 8px 40px;
     background-color: var(--lightgrey);
     border: 1px solid white;
-    border-radius: 20px;
     color: white;
     font-size: 1rem;
 }
@@ -137,13 +142,16 @@ header {
 .auth {
     display: flex;
     gap: 15px;
+    margin-right: 25px;
 
     a {
         color: white;
         font-size: 1rem;
         text-decoration: none;
+        padding-left: 10px;
     }
 }
+
 /* /header */
 
 /* main */
@@ -153,37 +161,96 @@ main {
     overflow: hidden;
 }
 
+/* left colun with overflow */
+
 .left {
     flex: 5;
     padding: 10px;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .album {
-    width: calc(25% - 10px);
+    width: calc(25% - 20px);
+    text-align: left;
     display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    align-items: flex-start;
     flex-direction: column;
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
+    padding: 10px;
 }
+
+.album img {
+    width: 95%;
+    height: auto;
+    display: block;
+}
+
+.album p {
+    color: #eee;
+}
+
+.color-span {
+    color: #aaa;
+}
+
+/* right column */
 
 .right {
+    flex: 2;
     padding: 20px;
     background-color: var(--darkgrey);
-    width: 30%;
-
-    img {
-        max-width: 100%;
-    }
 }
+
+.right img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.right h3 {
+    margin: 10px 0 5px 0;
+    color: #fff;
+}
+
+.right p {
+    margin: 0 0 15px 0;
+    color: #bbb;
+}
+
+.right .tracks {
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* button */
+
+.button,
+.wishlist {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.button {
+  background: #fff;
+  color: #000;
+}
+
+.wishlist {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+
+
+
+
+
 /* /main */
