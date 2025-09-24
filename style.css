@@ -225,12 +225,45 @@ main {
     text-decoration: none;
 }
 
+/* bottone nella parte destra con allineamento */
+
+.track-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: white;
+    align-items: center;
+}
+
+.track-info i {
+    font-size: 70px;
+    color: white;
+    margin-top: 5px;
+}
+
+.track-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-text h3 {
+    margin: 0 0 5px 0;
+    color: white;
+}
+
+.track-text p {
+    margin: 0;
+    color: white;
+}
+
+
 /* button */
 
 .button,
 .wishlist {
   display: block;
-  width: 70%;
+  width: 95%;
   margin: 10px auto;
   padding: 12px;
   text-align: center;
