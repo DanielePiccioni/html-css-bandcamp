@@ -2,7 +2,6 @@
     --grey: #2b2b2b;
     --darkgrey: #222222;
     --lightgrey: #464646;
-
 }
 
 * {
@@ -21,8 +20,6 @@
     header {
         background: yellow;
 
-
-
         .top-bar {
             background: pink;
         }
@@ -37,7 +34,6 @@
     }
 
     main {
-
         .left {
             background-color: lightgreen;
         }
@@ -61,81 +57,133 @@ body {
     flex-direction: column;
 }
 
+/* header */
 header {
     display: flex;
     flex-direction: column;
-
-    .top-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 20px;
-        background-color: var(--darkgrey);
-    }
-
-    .search-large {
-        padding: 9px 20px;
-        background-color: var(--lightgrey);
-    }
-
-    .search-large input{
-        width: 320px;
-        background-color: var(--lightgrey);
-        border: 1px solid white;
-        border-radius: 20px;
-        padding: 10px 15px;
-        color: white;
-    }
-
-    .search-small{
-        flex: 0 0 200px;
-        margin-right: auto;
-    }
-
-    .search-small input {
-        width: 100%;
-        background-color: var(--lightgrey);
-    }
 }
 
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background-color: var(--darkgrey);
+}
 
+/* Barra sotto grande */
+.search-large {
+    padding: 9px 20px;
+    background-color: var(--lightgrey);
+}
+
+.search-large .input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 320px;
+}
+
+.search-large .input-icon i {
+    position: absolute;
+    left: 13px;
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search-large .input-icon input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    background-color: var(--lightgrey);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Barra sopra piccola */
+.search-small {
+    flex: 0 0 200px;
+    margin-right: auto;
+}
+
+.search-small .input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-small .input-icon i {
+    position: absolute;
+    left: 13px;
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search-small .input-icon input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    background-color: var(--lightgrey);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* pulsanti barra di ricerca a destra */
+.auth {
+    display: flex;
+    gap: 15px;
+
+    a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}
+/* /header */
+
+/* main */
 main {
     background-color: var(--darkgrey);
     display: flex;
     overflow: hidden;
-
-    .left {
-        padding: 10px;
-        overflow-y: auto;
-        display: flex;
-        flex-wrap: wrap;
-        width: 70%;
-    }
-
-    .album {
-        width: calc(25% - 10px);
-        display: flex;
-        padding: 10px;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        flex-direction: column;
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-    }
-
-    .right {
-        padding: 20px;
-        background-color: var(--darkgrey);
-        width: 30%;
-
-        img {
-            max-width: 100%;
-        }
-    }
-
 }
+
+.left {
+    flex: 5;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: calc(25% - 10px);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.right {
+    padding: 20px;
+    background-color: var(--darkgrey);
+    width: 30%;
+
+    img {
+        max-width: 100%;
+    }
+}
+/* /main */
