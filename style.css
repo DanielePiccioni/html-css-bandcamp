@@ -1,7 +1,7 @@
 :root {
     --grey: #2b2b2b;
     --darkgrey: #222222;
-
+    --lightgrey: #464646;
 
 }
 
@@ -40,12 +40,10 @@
 
         .left {
             background-color: lightgreen;
-            width: 70%;
         }
 
         .right {
             background-color: blue;
-            width: 30%;
         }
 
         .album {
@@ -77,30 +75,67 @@ header {
 
     .search-large {
         padding: 9px 20px;
-        background-color: var(--grey);
+        background-color: var(--lightgrey);
     }
 
+    .search-large input{
+        width: 320px;
+        background-color: var(--lightgrey);
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 10px 15px;
+        color: white;
+    }
+
+    .search-small{
+        flex: 0 0 200px;
+        margin-right: auto;
+    }
+
+    .search-small input {
+        width: 100%;
+        background-color: var(--lightgrey);
+    }
 }
 
 
 main {
-
+    background-color: var(--darkgrey);
     display: flex;
+    overflow: hidden;
 
     .left {
         padding: 10px;
         overflow-y: auto;
         display: flex;
         flex-wrap: wrap;
+        width: 70%;
     }
 
     .album {
-        width: calc(25% - 20px);
-        text-align: left;
+        width: calc(25% - 10px);
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
     }
 
     .right {
         padding: 20px;
         background-color: var(--darkgrey);
+        width: 30%;
+
+        img {
+            max-width: 100%;
+        }
     }
+
 }
