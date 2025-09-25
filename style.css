@@ -279,13 +279,62 @@ main {
 .wishlist {
     background: #2a2a2a;
     color: #fff;
+    border: 1px solid #fff;
 }
 
+/* artist hidden and only showed at 744px */
+.artist {
+    display: none;
+    color: white;
+}
+
+.artist-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.follow {
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: white;
+    background: #2a2a2a;
+    padding: 14px 48%;
+    margin-top: 15px;
+}
 
 /* /main */
 
 
 /* media query */
+
+@media (max-width: 744px) {
+    main {
+        flex-direction: row;
+    }
+
+    .left {
+        flex: 3;
+        padding: 8px;
+    }
+
+    .right {
+        flex: 2;
+        padding: 10px;
+    }
+
+    .album {
+        width: calc(50% - 10px);
+    }
+
+    .artist {
+        display: block;
+    }
+}
+
 
 @media (max-width: 600px) {
 
@@ -307,11 +356,11 @@ main {
         content: url(./img/logo-mobile.jpeg);
     }
 
-.top-bar{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+    .top-bar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
     .search-small input {
         display: none;
@@ -322,5 +371,8 @@ main {
         align-items: center;
         justify-content: center;
     }
-    
+
+    .artist {
+        display: none;
+    }
 }
