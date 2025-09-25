@@ -262,28 +262,65 @@ main {
 
 .button,
 .wishlist {
-  display: block;
-  width: 95%;
-  margin: 10px auto;
-  padding: 12px;
-  text-align: center;
-  border-radius: 4px;
-  text-decoration: none;
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
 }
 
 .button {
-  background: #fff;
-  color: #000;
+    background: #fff;
+    color: #000;
 }
 
 .wishlist {
-  background: #2a2a2a;
-  color: #fff;
+    background: #2a2a2a;
+    color: #fff;
 }
 
 
-
-
-
-
 /* /main */
+
+
+/* media query */
+
+@media (max-width: 600px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        flex: none;
+        width: 100%;
+
+        .album {
+            width: calc(50% - 20px);
+        }
+    }
+
+    .logo {
+        content: url(./img/logo-mobile.jpeg);
+    }
+
+.top-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+    .search-small input {
+        display: none;
+    }
+
+    .search-small .input-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
