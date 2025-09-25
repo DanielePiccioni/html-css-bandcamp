@@ -306,7 +306,77 @@ main {
     margin-top: 15px;
 }
 
+
+/* pulsanti hover */
+
+/* play button img hover */
+
+.album {
+    position: relative;
+}
+
+.play-icon {
+    position: absolute;
+    bottom: 80px; 
+    left: 15px; 
+    font-size: 30px;
+    color: whitesmoke;
+    opacity: 0; 
+}
+
+.album:hover .play-icon {
+    opacity: 1;
+}
+
+
+/* hover on signup and login */
+
+
+.auth a {
+    display: inline-block; 
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px; 
+}
+
+.auth a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* /hover */
+
+/* cuore */
+
+.cuore{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+
+/* scrollbar */
+
+
+.left::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.left::-webkit-scrollbar-track {
+    background: var(--darkgrey); 
+    border-radius: 10px;
+}
+
+.left::-webkit-scrollbar-thumb {
+    background: var(--grey); 
+    border-radius: 10px;
+}
+
+.left::-webkit-scrollbar-thumb:hover {
+    background: var(--lightgrey);
+}
+
 /* /main */
+
+
 
 
 /* media query */
